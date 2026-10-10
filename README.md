@@ -94,6 +94,9 @@ python scripts/transform.py
 To run the SQL analysis after the data is loaded:
 mysql -u root -p country_pipeline < sql/queries.sql
 
+To open the dashboard:
+streamlit run dashboard/app.py
+
 ## SQL analysis
 
 `sql/queries.sql` contains queries on country counts, total population, density, fertility rate, migration, urban population and growth.
