@@ -83,19 +83,34 @@ The `.env` file is listed in `.gitignore`, so your password is never uploaded.
 ## How to run
 
 Create the database first:
+
+```
 mysql -u root -p < sql/database.sql
+```
 
 Then run the full pipeline:
+
+```
 python scripts/main.py
+```
 
 To run only the cleaning step, which doesn't need MySQL:
+
+```
 python scripts/transform.py
+```
 
 To run the SQL analysis after the data is loaded:
+
+```
 mysql -u root -p country_pipeline < sql/queries.sql
+```
 
 To open the dashboard:
+
+```
 streamlit run dashboard/app.py
+```
 
 ## SQL analysis
 
