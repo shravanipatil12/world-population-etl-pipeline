@@ -1,71 +1,47 @@
-# World Population Analytics Dashboard
+# World Population Dashboard
 
-This document outlines the planned Power BI dashboard for the World Population ETL project.
+An interactive dashboard built with Streamlit and Plotly. It reads the cleaned dataset produced by the ETL pipeline (`data/processed/clean_world_population.csv`) and lets you explore 2023 population figures for 234 countries and territories.
 
-## Dashboard purpose
-The dashboard will visualize the cleaned and loaded world population dataset to help stakeholders understand demographic differences, growth patterns, and urbanization trends across countries.
+## What it shows
 
-## KPI cards
-1. Total Population
-2. Countries Covered
-3. Average Median Age
-4. Average Fertility Rate
+**Summary numbers:** number of countries and territories, total population, average population, highest population, average median age, average fertility rate, average yearly change, and the number of shrinking countries.
 
-## Visuals
-### 1. Top 10 Most Populated Countries
-- Chart type: Horizontal bar chart
-- Purpose: Compare population totals across the largest countries.
+**Charts:**
+- Top 10 most populated countries (bar chart)
+- Population share of the top 10 (donut chart)
+- Top 10 countries by yearly growth (bar chart)
+- Fertility rate against median age, sized by population (scatter plot)
+- World map coloured by population
+- Top 10 countries by population density (bar chart)
 
-### 2. Population Share by Top 10 Countries
-- Chart type: Donut chart
-- Purpose: Show the share of the global population represented by the top 10 countries.
+**Country explorer:** a sortable table of all matching countries, with a button to download the filtered data as a CSV file.
 
-### 3. Top 10 Highest Population Density
-- Chart type: Bar/column chart
-- Purpose: Highlight countries with the highest population density.
+## Filters
 
-### 4. Relationship Between Median Age & Fertility Rate
-- Chart type: Scatter plot
-- X-axis: Median Age
-- Y-axis: Fertility Rate
-- Size: Population
-- Tooltip: Country
-- Purpose: Explore the relationship between demographic age profile and fertility trends.
+The sidebar lets you:
+- search for a country by name
+- pick one or more countries
+- set a median age range
+- show only growing or only shrinking countries
 
-### 5. Top Countries by Net Migration
-- Chart type: Bar chart
-- Purpose: Identify countries with the strongest net migration inflows or outflows.
+All numbers and charts update to match the filters.
 
-### 6. Population by Continent
-- Chart type: Bar/column chart or map-based summary
-- Purpose: Compare country totals by region when a continent mapping table is available.
+## How to run
 
-Note: The current dataset does not include a continent column. A continent mapping table can be added in a future enhancement if needed.
+From the project folder, with the virtual environment active:
 
-## Slicers
-- Country
-- Population
-- Median Age
-- Fertility Rate
+```
+pip install streamlit plotly pandas
+streamlit run dashboard/app.py
+```
 
-## Dashboard color palette
-- Primary: #1565C0
-- Secondary: #26A69A
-- Accent: #FB8C00
-- Background: #F8F9FA
-- Card background: #FFFFFF
-- Border: #E5E7EB
-- Text: #212121
-- Secondary text: #616161
+The dashboard opens in your browser, usually at `localhost:8501`. It runs on your own computer and is not hosted online.
 
-## Planned layout
-- Top row: KPI cards
-- Middle row: Population rankings and density chart
-- Lower row: Fertility vs median age scatter plot and net migration chart
-- Side panel: Country, population, median age, and fertility slicers
+## Notes
 
-## Future improvements
-- Add continent mapping and regional analysis
-- Add historical population trends over time
-- Publish the dashboard to Power BI Service
-- Add executive commentary and annotations for key findings
+- The map matches countries by name, so a few countries or territories may not appear on it.
+- Values that were `N.A.` in the source data are empty in the cleaned file and are left out of averages.
+
+## Credits
+
+Data: *World Population by Country 2023* by Joakim Arvidsson, Kaggle, based on UN Population Division estimates.
