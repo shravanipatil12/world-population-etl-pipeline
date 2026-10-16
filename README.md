@@ -2,9 +2,9 @@
 
 An end-to-end data engineering and analytics project that processes 2023 population data for 234 countries and territories. Built using Python, Pandas, MySQL, SQL, and Streamlit, this project combines data extraction, transformation, database loading, SQL analysis, and interactive visualization.
 
-## 🚀 Live Dashboard
+## Live Dashboard
 
-### [🌐 View the Interactive World Population Analytics Dashboard](https://shravanipatil12-world-population-etl-pipeli-dashboardapp-mtjok6.streamlit.app)
+### [ View the Interactive World Population Analytics Dashboard](https://shravanipatil12-world-population-etl-pipeli-dashboardapp-mtjok6.streamlit.app)
 
 Explore population statistics, compare countries, and interact with demographic visualizations through the deployed Streamlit dashboard.
 
@@ -12,7 +12,7 @@ Explore population statistics, compare countries, and interact with demographic 
 
 ![World Population Analytics Dashboard](dashboard/dashboard.png)
 
-## 🎯 Project Objectives
+## Project Objectives
 
 - Build an end-to-end ETL pipeline using real-world population data.
 - Clean and standardize raw data using Python and Pandas.
@@ -57,7 +57,7 @@ world-population-etl-pipeline/
 └── README.md
 ```
 
-## 🗃️ Dataset
+## Dataset
 
 The project uses the *World Population by Country 2023* dataset attributed to Joakim Arvidsson on Kaggle, based on United Nations Population Division estimates.
 
@@ -77,7 +77,7 @@ The project uses the *World Population by Country 2023* dataset attributed to Jo
 - Urban population percentage
 - World population share
 
-## 🧹 Data Cleaning and Transformation
+## Data Cleaning and Transformation
 
 The transformation process includes:
 
@@ -103,7 +103,7 @@ The Streamlit dashboard provides interactive country-level population analysis, 
 - **Population density:** compare countries by people per square kilometer.
 - **Country explorer:** inspect filtered data and download the results as CSV.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Technology | Purpose |
 |---|---|
@@ -117,7 +117,7 @@ The Streamlit dashboard provides interactive country-level population analysis, 
 | Plotly | Interactive charts and visualizations |
 | Git and GitHub | Version control and project hosting |
 
-## ⚙️ Setup and Installation
+## Setup and Installation
 
 ### 1. Clone the repository
 
@@ -148,7 +148,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## 🗄️ MySQL Configuration
+## MySQL Configuration
 
 To run the database-loading and SQL-analysis stages, install and start MySQL.
 
@@ -164,7 +164,7 @@ MYSQL_DATABASE=country_pipeline
 
 **Security:** Never commit your `.env` file or real database credentials. The file should remain excluded through `.gitignore`.
 
-## ▶️ Running the Project
+## Running the Project
 
 ### Run the complete ETL pipeline
 
@@ -204,7 +204,7 @@ streamlit run dashboard/app.py
 
 You can also access the deployed dashboard using the live link at the top of this README.
 
-## 🔍 SQL Analysis
+## SQL Analysis
 
 The SQL queries explore:
 
@@ -216,7 +216,7 @@ The SQL queries explore:
 - Urban population
 - Population growth
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Add historical population data to analyze trends across multiple years.
 - Include continent and regional classifications.
